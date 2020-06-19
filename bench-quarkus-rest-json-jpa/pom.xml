@@ -148,4 +148,18 @@
       </properties>
     </profile>
   </profiles>
+
+  <!-- Defining Sonatype OSS Snapshot repository to access Quarkus snapshots -->
+  <repositories>
+    <repository>
+      <id>sonatype</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>sonatype</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+    </pluginRepository>
+  </pluginRepositories>
 </project>

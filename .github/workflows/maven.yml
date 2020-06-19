@@ -20,5 +20,9 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
+    # Launch a first test to download all libraries
+    - name: White launch
+      run: mvn -B test --fail-never
+    # Test again but this time fail the build on failures
+    - name: Real launch
+      run: mvn -B test --fail-at-end
